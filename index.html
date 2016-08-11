@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>iCloud</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="all">
+    <div class="content">
+        <div class="boxleft">
+        <!-- 点击添加事项 -->
+            <div class="logo">iCloud<span ng-click="add()">添加</span></div>
+            <ul>
+            <!-- 因为ng-Repeat不允许collection中存在两个相同Id的对象对于数字或者字符串等基本数据类型来说，它的id就是它自身的值。因此数组中是不允许存在两个相同的数字的。为了规避这个错误，需要定义自己的track by表达式。 -->
+                <li ng-repeat="v in todo track by $index"  ng-click="showcontent($index)" ng-click="changebg()" ng-style="{'background-color':$index==index?'#2d2d2b':''}">
+                    <span ng-style="{'background':v.color}"></span>
+                    <input type="text" ng-model="v.title" ng-change="onchange($index)">
+                </li>
+            </ul>
+        </div>
+        <!-- 搜索 还没完善 -->
+        <div class="boxrigth">
+            <div class="top">
+                <span class="seek"></span>
+                <input type="text" value="搜索所有提醒">
+                <div class="user">zmx</div>
+            </div>
+
+            <!-- 右半部区域 -->
+            <div class='xq' ng-style="{'color':todo[index].color}">
+                <h2>{{todo[index].title}}</h2>
+                <span ng-click="option(index)">选项</span>
+                <!-- 点击选项出现元素 -->
+                <div class="peizhi" ng-show="peizhif">
+                    <input type="text" ng-model="fontVal" ng-style="{'color':fontColor}">
+                    <p>颜色列表</p>
+                    <div>
+                        <ul>
+                            <li ng-repeat="v in color" ng-style="{'background-color':v,'border-color':v==fontColor?v:'transparent'}" ng-click="changeColor(v)"></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span ng-click='del(index)'>删除</span>
+                        <span ng-click="peizhif=false">取消</span>
+                        <span ng-click="finish(index)">完成</span>  
+                    </div>
+                </div>
+            </div>
+            <div class="zt">
+                <div>
+                    <span ng-click="f=!f"></span>
+                    已完成{{num}}项
+                </div>
+            </div>
+            <!-- 已完成事项 -->
+            <div class="done" ng-show="f">
+                <div>
+                <!-- 事件有待修改 -->
+                    <p class="date">时间</p>
+                    <ul>
+                        <li ng-repeat="v in todo[index].list|filter:done">
+                            <span ng-click="over(v,false)" ng-style="{'background':todo[index].color,'border-color':todo[index].color}"></span>
+                            <input type="text" ng-model="v.content" >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 未完成事项 -->
+            <div class="doing">
+                <ul>
+                    <li ng-repeat="v in todo[index].list|filter:doing">
+                        <span ng-click="over(v,true)" ng-style="{'background-color':'rgba(0,0,0,0)','border-color':todo[index].color}"></span>
+                        <input type="text" ng-model="v.content">
+                    </li>
+                </ul>
+                <!-- 添加新任务 -->
+                <div class="addnew" ng-click="addson(index)">新任务...</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

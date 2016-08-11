@@ -1,0 +1,255 @@
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+p,
+input {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: 'SFNSDisplay', 'SFNSText', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.content {
+  height: 100%;
+  margin-left: 390px;
+}
+.content .boxleft {
+  width: 390px;
+  height: 100%;
+  float: left;
+  margin-left: -390px;
+  background-color: #383836;
+}
+.content .boxleft .logo {
+  height: 45px;
+  width: 390px;
+  background-color: #383836;
+  color: white;
+  position: fixed;
+  border-bottom: 1px solid #1A1A1A;
+}
+.content .boxleft .logo span {
+  float: right;
+}
+.content .boxleft ul {
+  margin-top: 45px;
+}
+.content .boxleft ul li {
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid #2A2A28;
+  line-height: 45px;
+  padding-left: 15px;
+  color: white;
+  font-size: 16px;
+}
+.content .boxleft ul li input {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  border: 0;
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+}
+.content .boxleft ul li span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #00ff40;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.content .boxrigth {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+.content .boxrigth .top {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #CECECE;
+}
+.content .boxrigth .top .seek {
+  display: inline-block;
+  width: 44px;
+  height: 0;
+}
+.content .boxrigth .top input {
+  height: 100%;
+  width: 436px;
+  border: 0;
+  border-right: 1px solid #CECECE;
+}
+.content .boxrigth .top .user {
+  float: right;
+}
+.content .boxrigth .xq {
+  margin-left: 30px;
+  height: 81px;
+  line-height: 81px;
+  padding-right: 15px;
+  border-bottom: 1px solid #CECECE;
+  position: relative;
+}
+.content .boxrigth .xq h2 {
+  float: left;
+  display: inline-block;
+  font-family: 'SFNSDisplay', 'SFNSText', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+}
+.content .boxrigth .xq span {
+  float: right;
+}
+.content .boxrigth .xq .peizhi {
+  width: 375px;
+  height: 250px;
+  border: 1px solid #e5e5e5;
+  z-index: 9999;
+  position: absolute;
+  right: 50px;
+  top: 0px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content .boxrigth .xq .peizhi input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  height: 40px;
+  font-size: 24px;
+}
+.content .boxrigth .xq .peizhi p {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.content .boxrigth .xq .peizhi div {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.content .boxrigth .xq .peizhi div li {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  float: left;
+  margin: 0 5px;
+  border: 2px solid #000;
+  padding: 3px;
+  background-clip: content-box;
+  background-origin: content-box;
+}
+.content .boxrigth .xq .peizhi div span {
+  margin: 0 10px;
+}
+.content .boxrigth .zt {
+  line-height: 53px;
+  margin-left: 30px;
+  height: 53px;
+  padding-left: 30px;
+}
+.content .boxrigth .zt div {
+  border-bottom: 1px solid #CECECE;
+  font-size: 19px;
+  color: #999;
+}
+.content .boxrigth .zt div span {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-image: url('../images/packed-5.png');
+  background-position: -96px -497px;
+  background-repeat: no-repeat;
+  transform: translateY(6px);
+}
+.content .boxrigth .done {
+  height: auto;
+  margin-bottom: 50px;
+  line-height: 45px;
+  margin-left: 60px;
+}
+.content .boxrigth .done .date {
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid #CECECE;
+}
+.content .boxrigth .done ul {
+  width: 100%;
+  height: auto;
+}
+.content .boxrigth .done ul li {
+  padding-left: 30px;
+  width: 100%;
+  height: 53px;
+  border-bottom: 1px solid #CECECE;
+  line-height: 10px;
+  font-size: 16px;
+}
+.content .boxrigth .done ul li span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-clip: content-box;
+  background-origin: content-box;
+  border: 2px solid red;
+  transform: translateY(10px);
+}
+.content .boxrigth .done ul li input {
+  width: 70%;
+  height: 50px;
+  border: 0;
+  transform: translateY(1px);
+  font-size: 24px;
+}
+.content .boxrigth .doing {
+  line-height: 53px;
+  margin-left: 60px;
+}
+.content .boxrigth .doing li {
+  padding-left: 30px;
+  width: 100%;
+  height: 53px;
+  border-bottom: 1px solid #CECECE;
+}
+.content .boxrigth .doing li span {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  display: inline-block;
+  background-color: #2B2A29;
+  transform: translateY(10px);
+}
+.content .boxrigth .doing li input {
+  width: 70%;
+  height: 50px;
+  border: 0;
+  transform: translateY(1px);
+  font-size: 24px;
+}
+.content .boxrigth .doing .addnew {
+  padding-left: 30px;
+  width: 100%;
+  height: 53px;
+  box-sizing: border-box;
+}
